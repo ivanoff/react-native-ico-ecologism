@@ -23,6 +23,7 @@ render() {
           <Icon name="battery-with-recycle-symbol" />
           <Icon name="corn" height="40" width="40" />
           <Icon name="danger-signal" color="red" />
+          <Icon name="danger-signal" colors={{ "#000000": "#FFFFFF" }} />
           <Icon name="corn" badge="10" />
           <Icon name="corn" badge={{value: 'A', fontSize: 25, radius: 22, position:'top_left', color:'orange', backgroundColor:'blue'}}/>
           <Icon name="battery-with-recycle-symbol" background="circle" />
@@ -69,13 +70,14 @@ Returns a SvgXml icon by name and group.
 ------|----------|---------------|-------------|---------
 name | no |  | name of icon | "battery-with-recycle-symbol"
 color | yes | | line color, css style | "#00ff00", "#0f0", "green"
+colors | yes | | replace colors | {"#FFFFFF": "#000000"} // white to black
 width | yes | 20 | width of the icon | 40
 height | yes | 20 | height of the icon | 40
-background | no | | background type | "circle"
-background | no | | background object | {type: "circle", color: 'yellow'}
-badge | no | | badge string | "10"
-badge | no | | badge object | {value: 'A', fontSize: 25, radius: 22, position:'top_left', color:'orange', backgroundColor:'blue'}
-...rest | no | | other props | style={{backgroundColor: "#00f"}}
+background | yes | | background type | "circle"
+background | yes | | background object | {type: "circle", color: 'yellow'}
+badge | yes | | badge string | "10"
+badge | yes | | badge object | {value: 'A', fontSize: 25, radius: 22, position:'top_left', color:'orange', backgroundColor:'blue'}
+...rest | yes | | other props | style={{backgroundColor: "#00f"}}
 
 ## Icons Made by
 
